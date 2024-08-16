@@ -29,7 +29,7 @@ export MAIN_KROKI_PORT=51080
 
 %runscript
 #log file is out to /tmp/kroki_err_and_out.log - blah 
-coproc KROKI_SERV_RUN { java -DKROKI_LISTEN=127.0.0.1:${MAIN_KROKI_PORT} -jar /usr/local/kroki/kroki-server.jar &> /tmp/kroki_err_and_out.log } 
+/usr/bin/bash -c "coproc KROKI_SERV_RUN { java -DKROKI_LISTEN=127.0.0.1:${MAIN_KROKI_PORT} -jar /usr/local/kroki/kroki-server.jar &> /tmp/kroki_err_and_out.log } "
 
 #sleep for a few second while the server runs
 sleep 3
