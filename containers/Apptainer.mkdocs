@@ -29,8 +29,16 @@ export MAIN_KROKI_PORT=51080
 
 %runscript
 #log file is out to /tmp/kroki_err_and_out.log - blah 
-java -DKROKI_LISTEN=127.0.0.1:${MAIN_KROKI_PORT} -jar /usr/local/kroki/kroki-server.jar &> /tmp/kroki_err_and_out.log &
-#just run the mkdocs command 
+coproc KROKI_SERV_RUN { java -DKROKI_LISTEN=127.0.0.1:${MAIN_KROKI_PORT} -jar /usr/local/kroki/kroki-server.jar &> /tmp/kroki_err_and_out.log } 
+
+#sleep for a few second while the server runs
+sleep 3
+
 mkdocs build 
+
+#sleep again for a few.. or one seconds 
+sleep 1 
+
+kill -5 KROKI_SERV_RUN_PID
 
 # eventually kill the server 
