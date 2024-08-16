@@ -12,9 +12,9 @@ From: yuzutech/kroki
 
 %post
 
-#do the apt installations here 	
+#do the apt installations here
 apt-get -ymq update
-apt-get -ymq install python3-pip git curl wget links
+apt-get -ymq install python3-pip git curl wget links bash
 
 #python package install just through pip 
 pip3 install mkdocs-material mkdocs-kroki-plugin mkdocs-gitbook lantana mkdocs-bootstrap4 mkdocs-cluster #--break-system-packages
@@ -28,10 +28,9 @@ export LC_ALL=C.UTF-8
 export MAIN_KROKI_PORT=51080
 
 %runscript
+#log file is out to /tmp/kroki_err_and_out.log - blah 
 java -DKROKI_LISTEN=127.0.0.1:${MAIN_KROKI_PORT} -jar /usr/local/kroki/kroki-server.jar &> /tmp/kroki_err_and_out.log &
+#just run the mkdocs command 
+mkdocs build 
 
-
-
-# kill # java -jar /usr/local/kroki/kroki-server.jar list | grep kroki | cut -d '/' -f 1 | xargs -I'{}' 
-# java -jar /usr/local/kroki/kroki-server.jar list | grep kroki | cut -d '/' -f 1 > /tmp/java_job
-
+# eventually kill the server 
