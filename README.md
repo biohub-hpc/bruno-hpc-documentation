@@ -9,4 +9,8 @@
 `containers/`
 * Apptainer and Docker/Podman containers for building the documentation. 
 
+`docs`
+* The actual markdown documents that mkdocs will render into html
+
+
 
