@@ -1,10 +1,9 @@
-# Welcome
+# Welcome to the Bruno HPC Cluster User Documentation
 
-... to the CZBioHub HPC User Guide, a reference for all things in the
-CZBioHub HPC universe available for Scientific and Research Computation,
+A reference for the Bruno HPC cluster for Scientific and Research Computation,
 Storage and Networking.
 
-This documentation is divided into several major sections, accessible via the left hand sidebar:
+This documentation is divided into several major sections, accessible via the left hand sidebar.
 
 ## Tutorial
 
