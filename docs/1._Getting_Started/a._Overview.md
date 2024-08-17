@@ -1,4 +1,4 @@
-# Introduction to the HPC Cluster Environment
+Introduction to the HPC Cluster Environment
 
 A High Performance Computing (HPC) cluster is, at its core, a mechanism for
 providing shared access to a collection of computing, storage and network
@@ -15,18 +15,18 @@ a Cloud environment).
 
 1. A common Operating System image, providing a consistent kernel, driver and
    software environment on all resources.
-1. A high speed interconnect dedicated to internode trusted communication and
+2. A high speed interconnect dedicated to internode trusted communication and
    for accessing storage.
-1. A scheduler, accepting requests and managing the resources, starting and
+3. A scheduler, accepting requests and managing the resources, starting and
    stopping processes, etc.
-1. A common storage namespace on all nodes, no confusion about which node has
+4. A common storage namespace on all nodes, no confusion about which node has
    what data or storage mounts.
-1. A centrally maintained software stack, with installs of a wide range of
+5. A centrally maintained software stack, with installs of a wide range of
    software ready and easy to access and use, and consistent across all the
    cluster nodes.
-1. A set of login nodes, providing an interface for users to use command line
+6. A set of login nodes, providing an interface for users to use command line
    tools, submit jobs interactively or in batch and access/manage data.
-1. A web interface providing a graphical interface to GUI tools and software
+7. A web interface providing a graphical interface to GUI tools and software
    like Jupyter Notebooks, RStudio, etc.
 
 This is a very simple, but powerful, paradigm for accessing and using
@@ -36,12 +36,4 @@ Additionally, it's possible to do simple and non-intensive work directly on the
 login nodes without the need for involving the scheduling layer until ready to
 scale a task up or out across the resources. At the other end of the spectrum
 it's possible to use workflow tools to architect complex pipelines and
-processes, all in the same shared, multi-user environment. .
-
-
-
-
-
-
-
-
+processes, all in the same shared, multi-user environment.
