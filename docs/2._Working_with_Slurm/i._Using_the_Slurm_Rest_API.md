@@ -1,4 +1,4 @@
-# Slurm REST API
+# Using the Slurm REST API
 
 ## Overview
 
