@@ -1,4 +1,6 @@
-# Submitting Arrays 
+# Using Batch Job Arrays 
+
+## Submitting Arrays 
 
 Array jobs are much like single job submissions with a few exceptions:
 
@@ -37,7 +39,7 @@ echo
 sleep 60s
 ```
 
-# `SLURM_ARRAY_TASK_ID` as a parameter
+## `SLURM_ARRAY_TASK_ID` as a parameter
 
 Within an array job script, the `${SLURM_ARRAY_TASK_ID}` value can be used to
 change the scripts behavior for each element job in the array. For example,
@@ -59,7 +61,7 @@ A script for this might look like:
 sleep $SLURM_ARRAY_TASK_ID
 ```
 
-# Reading Multiple Arbitrary Parameters
+## Reading Multiple Arbitrary Parameters
 
 An arbitrary number of key-value pairs can be associated with each
 `SLURM_ARRAY_TASK_ID` by having the job script read a file which is indexed on
@@ -114,7 +116,7 @@ command, arguments, scripts, files, etc, making job arrays a very powerful
 feature for parallelizing tasks requiring no intercommunication between each
 task.
 
-# `${SLURM_ARRAY_TASK_ID}` to Process a List
+## `${SLURM_ARRAY_TASK_ID}` to Process a List
 
 Given a list of items, one per line in a file, it's easy to use an array to
 process each item. Note that it's also possible to adjust which lines get
