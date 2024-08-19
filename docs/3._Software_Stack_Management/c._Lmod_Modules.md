@@ -1,13 +1,6 @@
 # Lmod Modules
 
-For more complex software, packages which conflict with others in command
-namespace or which need multiple versions of the same package to be available,
-the installation is maintained in `/hpc/apps` using the `module` command to add
-and remove these applications to and from the working environment as needed.
-We've chosen [Lmod modules](https://lmod.readthedocs.io/en/latest/) as the
-package to provide the `module` command, it's based on the [Lua programming
-language](https://www.lua.org/) and has more flexibility and features than the
-TCL based `environment-modules`.
+For more complex software, packages which conflict with others in command namespace or which need multiple versions of the same package to be available, the installation is maintained in `/hpc/apps` using the `module` command to add and remove these applications to and from the working environment as needed. We've chosen [Lmod modules](https://lmod.readthedocs.io/en/latest/) as the package to provide the `module` command, it's based on the [Lua programming language](https://www.lua.org/) and has more flexibility and features than the TCL based `environment-modules`.
 
 Some common `module` commands and usage are described below.
 
@@ -85,7 +78,6 @@ To get information about a specific module, especially how to load it, `module s
 -------------------------------------------------------------------------------------------------------------------------------
 
 
-
 [randall.white@cluster ~]$ module spider cryosparc/4.5.1-motioncor2-1.6.4
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -99,11 +91,9 @@ To get information about a specific module, especially how to load it, `module s
 
 ```
 
-
 ## `module unload|purge`
 
-As implied in the `module list` output, to remove things from the environment you can `module purge`
-to completely clean it or `module unload` to remove a specific package.
+As implied in the `module list` output, to remove things from the environment you can `module purge` to completely clean it or `module unload` to remove a specific package.
 
 ```
 [john.hanks@cluster ~]$ which R
