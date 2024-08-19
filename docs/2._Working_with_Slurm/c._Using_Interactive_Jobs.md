@@ -4,13 +4,8 @@ There are many occasions when it's desirable to have a node or nodes for interac
 
 
 ```
-# Simple srun session
-[john.hanks@login-01 ~]$ srun --pty bash -l
-[john.hanks@cpu-c-1 ~]$ exit
-logout
-[john.hanks@login-01 ~]$ 
+# Simple salloc interactive session
 
-# Same thing, but using salloc
 [john.hanks@login-01 ~]$ salloc
 salloc: Granted job allocation 40494
 salloc: Waiting for resource configuration
@@ -22,12 +17,15 @@ salloc: Job allocation 40494 has been revoked.
 [john.hanks@login-01 ~]$ 
 
 # Using srun for a session with a specific type of GPU
-[john.hanks@login-01 ~]$ srun --pty --gpus=a100:1 --partition=gpu bash -l
-[john.hanks@gpu-a-3 ~]$ exit
+# In this example its the h100 gpu
+
+[john.hanks@login-02 ~]$ salloc --constraint=h100 --gpus=1 --partition=gpu
+[john.hanks@gpu-f-3 ~]$ exit
 logout
-[john.hanks@login-01 ~]$ 
+[john.hanks@login-02 ~]$ 
 
 # salloc with a generic gpu request.
+
 [john.hanks@login-01 ~]$ salloc --gpus=1 --partition=interactive
 salloc: Granted job allocation 40496
 salloc: Waiting for resource configuration
@@ -41,11 +39,11 @@ salloc: Relinquishing job allocation 40496
 # forwarded to the submitting host. Requires X Forwarding having been set up
 # correctly, which may involve ssh options if trying to tunnel this back to a
 # desktop/laptop client.
-[john.hanks@login-01 ~]$ srun --pty --partition=gpu --gpus=1 --x11 glxgears
-3713 frames in 5.0 seconds = 742.472 FPS
-2071 frames in 5.0 seconds = 413.784 FPS
-746 frames in 5.0 seconds = 149.094 FPS
-793 frames in 5.0 seconds = 158.556 FPS
+
+[john.hanks@login-01 ~]$ salloc --partition=gpu --gpus=1 xeyes
 
 ```
 
+## Open OnDemand
+
+Another form of interactive jobs are through the Open OnDemand interface. [Please visit the Open OnDemand page for more informaiton.](/1._Getting_Started/c._Connecting_with_OnDemand)
