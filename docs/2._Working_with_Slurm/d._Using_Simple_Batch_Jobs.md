@@ -3,7 +3,7 @@
 The real power of SLURM for handling lots of work and complex analysis
 pipelines in exploited through the use of batch jobs scripts.
 
-# Job Scripts
+## Job Scripts
 
 The SLURM `sbatch` command is used to submit a job script to the scheduler for
 later execution subject to the load and the jobs priority. SLURM allows a job
@@ -83,7 +83,7 @@ creates and submits a job script for you:
 # Bash one-liner to run a command on all files in a directory.  Caveat: this is
 # generally not best practice and for large numbers of files (10's or 100's of 
 # thousands) can cause the scheduler or storage to slow or die. 
-[user@login1:~]$ for file in *; do sbatch --wrap "grep -i accatgtggtac $file"; done
+[user@login1:~]$ for file in *; do sbatch --wrap "grep -i accatgtggtac $file"; sleep 1; done
 Submitted batch job 87516
 Submitted batch job 87517
 Submitted batch job 87518
@@ -93,19 +93,7 @@ Submitted batch job 87521
 ...
 ```
 
-This would produce a `slurm-JOBID.out` file with your search results for each
-input file. However, this approach ignores the resulting I/O bottlenecks from
-having these execute one per core on a single node. A more efficient approach
-would request some number of cores per job to limit how many processes per node
-would be streaming data and spread the work across many nodes to speed up
-overall throughput. For more info and help please [wikiContactUs contact us] as
-we would be happy to explore ways to improve your workflow.
+This would produce a `slurm-JOBID.out` file with your search results for each input file. However, this approach ignores the resulting I/O bottlenecks from having these execute one per core on a single node. A more efficient approach would request some number of cores per job to limit how many processes per node would be streaming data and spread the work across many nodes to speed up overall throughput. For more info and help please [wikiContactUs contact us] as we would be happy to explore ways to improve your workflow.
 
-From this example it follows that a script can produce and submit other
-scripts, which can produce and submit other scripts,...ad infinitum. When
-writing scripts that submit jobs, careful debugging is important. It's easy for
-a mistake to submit thousands of jobs very quickly. While there are limits in
-place to prevent going to infinity, these limits are still quite high to allow
-for more flexibility in using the scheduler so problems with runaway
-submissions can still occur.
+From this example it follows that a script can produce and submit other scripts, which can produce and submit other scripts,...ad infinitum. When writing scripts that submit jobs, careful debugging is important. It's easy for a mistake to submit thousands of jobs very quickly. While there are limits in place to prevent going to infinity, these limits are still quite high to allow for more flexibility in using the scheduler so problems with runaway submissions can still occur.
 
