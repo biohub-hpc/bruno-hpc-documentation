@@ -1,13 +1,7 @@
 # Interactive Jobs
 
-There are many occasions when it's desirable to have a node or nodes for interactive use
-with a specific hardware configuration. For instance, manually editing a 256GB
-file in vim might work better on a node with a fast connection to the storage
-and > 256 GB of memory, rather than a login node that is shared and may have
-memory usage restrictions. Or you may want to start a series of
-graphical applications and display them on your workstation (local, NoMachine or OnDemand desktop) while still
-having fast access to the underlying storage. In these cases a straightforward
-interactive shell obtained with `srun` or `salloc` is a good solution. Some examples:
+There are many occasions when it's desirable to have a node or nodes for interactive use with a specific hardware configuration. For instance, manually editing a 256GB file in vim might work better on a node with a fast connection to the storage and > 256 GB of memory, rather than a login node that is shared and may have memory usage restrictions. Or you may want to start a series of graphical applications and display them on your workstation (local, NoMachine or OnDemand desktop) while still having fast access to the underlying storage. In these cases a straightforward interactive shell obtained with `srun` or `salloc` is a good solution. Some examples:
+
 
 ```
 # Simple srun session
