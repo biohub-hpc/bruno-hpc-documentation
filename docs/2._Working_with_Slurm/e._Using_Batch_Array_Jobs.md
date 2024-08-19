@@ -1,4 +1,4 @@
-# Using Batch Job Arrays 
+# Using Batch Array Jobs 
 
 ## Submitting Arrays 
 
