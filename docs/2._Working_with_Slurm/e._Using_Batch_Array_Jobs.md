@@ -109,21 +109,12 @@ param3=$(echo $values | cut -f 4 -d:)
 echo "command -arg1=$param1 -arg2=$param2 -arg3=$param3"
 ```
 
-When the script runs SLURM will assign each task a SLURM_ARRAY_TASK_ID and the
-script will use that to pull out the values for each job array element. As this
-script demonstrates, the task id can be used to access any number of arbitrary
-command, arguments, scripts, files, etc, making job arrays a very powerful
-feature for parallelizing tasks requiring no intercommunication between each
-task.
+When the script runs SLURM will assign each task a SLURM_ARRAY_TASK_ID and the script will use that to pull out the values for each job array element. As this
+script demonstrates, the task id can be used to access any number of arbitrary command, arguments, scripts, files, etc, making job arrays a very powerful feature for parallelizing tasks requiring no intercommunication between each task.
 
 ## `${SLURM_ARRAY_TASK_ID}` to Process a List
 
-Given a list of items, one per line in a file, it's easy to use an array to
-process each item. Note that it's also possible to adjust which lines get
-processed with the array specification. For instance, If you only wanted to
-process lines 100 - 120, simply use {{{--array=100-120}}}. The list could be as
-simple as a list of files prepared by ls -1 > mylistfofiles.txt or as
-complicated as a list of full command lines to execute in individual jobs.
+Given a list of items, one per line in a file, it's easy to use an array to process each item. Note that it's also possible to adjust which lines get processed with the array specification. For instance, If you only wanted to process lines 100 - 120, simply use {{{--array=100-120}}}. The list could be as simple as a list of files prepared by ls -1 > mylistfofiles.txt or as complicated as a list of full command lines to execute in individual jobs.
 
 An example list:
 
