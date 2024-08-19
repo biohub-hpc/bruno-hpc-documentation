@@ -1,14 +1,9 @@
-# The Conda Module
+# Python Anaconda and Mamba
 
-[Anaconda Python](https://www.anaconda.com/) is a very popular Python
-environment/distribution, which is made available via the centrally managed
-`anaconda` module. Typical usage of `conda` is to use it to manage/access
-multiple virtual environments, allowing the install of Python tools and
-packages that would otherwise conflict and be impossible to intall into the
-same location. 
+[Anaconda Python](https://www.anaconda.com/) is a very popular Python environment/distribution, which is made available via the centrally managed `anaconda` module. Typical usage of `conda` is to use it to manage/access
+multiple virtual environments, allowing the install of Python tools and packages that would otherwise conflict and be impossible to intall into the same location. 
 
-After `module load anaconda` you will have access to `conda` installed
-environments which are centrally maintained. 
+After `module load anaconda` you will have access to `conda` installed environments which are centrally maintained. 
 
 
 ```
@@ -28,13 +23,11 @@ griznog_testing          /hpc/apps/x86_64/anaconda/2021_09_16/envs/griznog_testi
 
 
 
-# Self-managed `conda` envs
+## Self-managed `conda` envs
 
-In addition to the centrally maintained virtual environments, it's also
-possible to use the central `anaconda` module to self-manage personal or group
-virtual environments. While it's possible and sometimes necessary to install
-the full `Anaconda` package, many times it's sufficient to just create a
-personal env using the `conda` module described above. Example:
+In addition to the centrally maintained virtual environments, it's also possible to use the central `anaconda` module to self-manage personal or group virtual environments. While it's possible and sometimes necessary to install the full `Anaconda` package, many times it's sufficient to just create a personal env using the `conda` module described above. 
+
+Example:
 
 
 ```
