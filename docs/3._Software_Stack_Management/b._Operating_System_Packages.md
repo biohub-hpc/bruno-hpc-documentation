@@ -4,4 +4,6 @@ The HPC environment is built on [Rocky Linux 8](https://rockylinux.org/) as the 
 
 Where there is an option to install a package using a supported RPM for [Rocky Linux 8](https://rockylinux.org/), this is the preferred way to get the application into the cluster environment. 
 
-*Note:* Rocky Linux, and enterprise Linux distributions in general, will have packages that might be a little bit older than other Linux distributions. [Please request software installation](/A._Contact_Us) if a newer packages is needed than available in the base operating system
+*Note:* Rocky Linux, and enterprise Linux distributions in general, will have packages that might be a little bit older than other Linux distributions. 
+
+[Please request software installation](/A._Contact_Us) if a newer packages is needed than available in the base operating system
