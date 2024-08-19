@@ -1,4 +1,4 @@
-# Lmod modules
+# Lmod Modules
 
 For more complex software, packages which conflict with others in command
 namespace or which need multiple versions of the same package to be available,
