@@ -1,4 +1,4 @@
-# Batch Jobs
+# Using Simple Batch Jobs
 
 The real power of SLURM for handling lots of work and complex analysis
 pipelines in exploited through the use of batch jobs scripts.
