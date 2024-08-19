@@ -1,4 +1,4 @@
-# Job Dependencies
+# Using Job Dependencies
 
 Job dependencies are features of SLURM that are used to delay the start time of a job until specific job dependencies have been satisfied. SLURM will then run them in the proper order based on the conditions supplied.  
 
