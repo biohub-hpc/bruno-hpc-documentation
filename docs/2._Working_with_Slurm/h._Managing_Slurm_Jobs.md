@@ -55,13 +55,13 @@ useful are given below as a handy reference.
 
 ```bash
 # Place hold on job JOBID
-[user@host]$ scontrol hold JOBID
+[user@host]$ scontrol hold <JOBID>
 
 # Release hold on job JOBID
-[user@host]$ scontrol release JOBID
+[user@host]$ scontrol release <JOBID>
 
 # List job details
-[user@host]$ scontrol show jobid=JOBID
+[user@host]$ scontrol show jobid=<JOBID>
 
 ```
 
@@ -80,9 +80,22 @@ information, some usage examples are shown below:
 [user@host]$ squeue -u $USER
 
 # Details for job JOBID
-[user@host]$ squeue -j JOBID
+[user@host]$ squeue -j <JOBID>
 
 # Extra detail for job JOBID
-[user@host]$ squeue -l -j JOBID
+[user@host]$ squeue -l -j <JOBID>
 
 ```
+
+### turm 
+
+`turm` is a command-line utility designed for managing and interacting with Slurm clusters. It simplifies and enhances the user experience by providing a streamlined interface to submit, monitor, and manage jobs on Slurm-based high-performance computing (HPC) systems. 
+
+`turm` abstracts many of the complexities involved in using Slurm, offering users a more intuitive way to interact with their jobs, view cluster status, and handle common tasks such as job submission, cancellation, and querying job details. It's particularly useful for users who prefer a more user-friendly approach to managing their workloads on Slurm clusters.
+
+```
+# on the command-line, load the `turm` module and start the application.
+[user@host]$ ml load turm
+[user@host]$ turm
+```
+
