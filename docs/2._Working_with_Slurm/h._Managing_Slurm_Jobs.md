@@ -99,3 +99,4 @@ information, some usage examples are shown below:
 [user@host]$ turm
 ```
 
+Please review the [ Software Stack Management ](/3._Software_Stack_Management) section for more information on loading/installing software on Bruno. 
