@@ -1,4 +1,4 @@
-# Job Management
+# Managing Slurm Jobs
 
 ## OnDemand
 
