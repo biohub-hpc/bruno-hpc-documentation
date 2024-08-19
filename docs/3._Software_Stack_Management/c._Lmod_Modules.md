@@ -1,6 +1,10 @@
 # Lmod Modules
 
-For more complex software, packages which conflict with others in command namespace or which need multiple versions of the same package to be available, the installation is maintained in `/hpc/apps` using the `module` command to add and remove these applications to and from the working environment as needed. We've chosen [Lmod modules](https://lmod.readthedocs.io/en/latest/) as the package to provide the `module` command, it's based on the [Lua programming language](https://www.lua.org/) and has more flexibility and features than the TCL based `environment-modules`.
+For more complex software, packages which conflict with others in command namespace or which need multiple versions of the same package to be available, the installation is maintained in `/hpc/apps` using the `module` command to add and remove these applications to and from the working environment as needed. 
+
+[Lmod](https://lmod.readthedocs.io/en/latest/) is a module system that manages the environment settings for different software packages, allowing users to easily load and switch between various software versions and dependencies. The software list displays all the modules that have been installed and are accessible in the current environment, helping users identify which applications, libraries, and tools they can use for their computational tasks.
+
+This software package provides the `module` command, it's based on the [Lua programming language](https://www.lua.org/) and has more flexibility and features than the TCL based `environment-modules`.
 
 Some common `module` commands and usage are described below.
 
