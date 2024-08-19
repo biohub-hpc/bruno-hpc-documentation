@@ -1,4 +1,4 @@
-# Advanced Job Scripts
+# Advanced Job Scripting
 
 ## Traps
 
