@@ -3,6 +3,8 @@ markdown_extensions:
   - tables
   - footnotes
   - def_list
+  - attr_list
+  - md_in_html
   - pymdownx.tasklist:
       custom_checkbox: true
 plugins:
