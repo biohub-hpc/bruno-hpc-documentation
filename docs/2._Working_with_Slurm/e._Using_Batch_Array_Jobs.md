@@ -17,7 +17,7 @@ Array jobs are much like single job submissions with a few exceptions:
 
 A simple array example script is:
 
-```
+```bash
 #!/bin/bash
 
 #SBATCH --job-name=ArrayJobScript
@@ -47,7 +47,7 @@ suppose you have an application with takes a parameter as an argument that is
 an integer value and you wish to test different values over a range from 1 to 10. 
 A script for this might look like:
 
-```
+```bash
 #!/bin/bash
 
 #SBATCH --job-name=ParameterTesting
@@ -77,7 +77,7 @@ file of values with values delimited by colons:
 
 Next, the array script which processes them:
 
-```
+```bash
 #!/bin/bash
 
 #SBATCH --job-name=ArrayIndexFileExample
@@ -131,7 +131,7 @@ There are only 10 kinds of people, those who understand octal and ... nevermind.
 
 Next, the array script which processes the list items:
 
-```
+```bash
 #!/bin/bash
 
 #SBATCH --job-name=ArrayLinesFromFileExample
