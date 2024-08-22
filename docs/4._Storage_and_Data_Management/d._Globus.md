@@ -14,16 +14,22 @@ Globus is a cloud-based service that enables secure, reliable data transfer and 
 - **Security:** Uses OAuth2 for authentication and encryption during transfers.
 - **Ease of Use:** Simple web interface with advanced command-line options.
 
-## 2. Setting Up Globus
+## 2. Logging in to Globus
 
-### Step 1: Create a Globus Account
-If you don't already have a Globus account, you need to create one:
+Go to the [Globus website](https://app.globus.org/).
 
-1. Go to the [Globus website](https://www.globus.org/).
-2. Click on "Login" and sign in with your institution credentials (many universities and research institutions are supported).
-3. If your institution is not listed, you can create a Globus ID using your email.
+Search for `Chan-Zuckerberg Biohub` 
 
-### Step 2: Install Globus Connect Personal (Optional)
+Enter your Okta authentication information to login to the globus service. 
+
+3. Click on "Login" and sign in with your institution credentials (many universities and research institutions are supported).
+4. If your institution is not listed, you can create a Globus ID using your email.
+
+## 3. Using Globus 
+
+### Web User Interface
+
+### Install Globus Connect Personal (Optional)
 If you want to transfer data between your local machine and an HPC system, you'll need to install Globus Connect Personal on your local machine.
 
 1. Download Globus Connect Personal from the [Globus website](https://www.globus.org/globus-connect-personal).
