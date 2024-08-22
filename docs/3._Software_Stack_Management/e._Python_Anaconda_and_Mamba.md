@@ -6,7 +6,7 @@ multiple virtual environments, allowing the install of Python tools and packages
 After `module load anaconda` you will have access to `conda` installed environments which are centrally maintained. 
 
 
-```
+```bash
 [john.hanks@cluster ~]$ module load anaconda
 [john.hanks@cluster ~]$ conda env list
 # conda environments:
@@ -30,7 +30,7 @@ In addition to the centrally maintained virtual environments, it's also possible
 Example:
 
 
-```
+```bash
 [john.hanks@cluster ~]$ module load anaconda
 [john.hanks@cluster ~]$ conda env list
 # conda environments:
@@ -103,7 +103,7 @@ griznog_testing          /hpc/apps/x86_64/anaconda/2021_09_16/envs/griznog_testi
 As you can see I now have a conda env of my own based off the centrally installed `anaconda`. To make this visible in the OnDemand Jupyter Notebook/Lab environments, I simply need to add the nb_conda package to it:
 
 
-```
+```bash
 [john.hanks@cluster ~]$ conda activate mycondaenv
 (mycondaenv) [john.hanks@cluster ~]$ conda install nb_conda
 Collecting package metadata (current_repodata.json): done
@@ -174,5 +174,3 @@ Enabling: nb_conda
 done
 (mycondaenv) [john.hanks@cluster ~]$ 
 ```
-
-
