@@ -12,7 +12,7 @@ These features are typically initiated with the `--dependency` option to `sbatch
 The `--dependency` option is typically used on the command line when invoking slurm job related client commands.
 
 
-```
+```bash
 $ sbatch --dependency=<type:job_id[:job_id][,type:job_id[:job_id]]> ...
 ```
 
@@ -30,7 +30,7 @@ Multiple job id's can be appended to a dependency type and mulyiple dependency t
 
 **Example:**
 
-```
+```bash
 [randall.white@login-02 ~]$ sbatch job_submission1.sh
 Submitted batch job 11719432
 [randall.white@login-02 ~]$ squeue -u $USER
@@ -49,7 +49,7 @@ Submitted batch job 11719434
 ## Job Script
 The `--dependency` option is typically used on the command line when invoking slurm job related client commands.
 
-```
+```bash
 #!/bin/bash
 
 #SBATCH --job-name=SimpleJobScript
@@ -64,7 +64,7 @@ hostname
 ```
 
 Submission
-```
+```bash
 [randall.white@login-02 ~]$ sbatch job_submission2.sh
 Submitted batch job 11719436
 [randall.white@login-02 ~]$ squeue -u $USER
@@ -79,7 +79,7 @@ Submitted batch job 11719436
 
 ### Capturing JOBID for use with subsequent dependent jobs
 
-```
+```bash
 [john.hanks@login-01 ~]$ JOBID=$(sbatch --parsable --wrap "sleep 300")
 [john.hanks@login-01 ~]$ JOBID=$(sbatch --parsable --dependency=afterok:${JOBID} --wrap "sleep 300")
 [john.hanks@login-01 ~]$ JOBID=$(sbatch --parsable --dependency=afterok:${JOBID} --wrap "sleep 300")
