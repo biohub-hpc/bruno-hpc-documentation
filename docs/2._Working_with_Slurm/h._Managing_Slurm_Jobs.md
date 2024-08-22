@@ -2,7 +2,7 @@
 
 ## OnDemand
 
-[OnDemand](https://ondemand.czbiohub.org) includes a jobs app which can be used
+[OnDemand](/1._Getting_Started/c._Connecting_with_OnDemand) includes a jobs app which can be used
 to manage and submit jobs.
 
 ## A Graphical View
