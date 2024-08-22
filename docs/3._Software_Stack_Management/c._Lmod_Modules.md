@@ -13,7 +13,7 @@ Some common `module` commands and usage are described below.
 Using `module` managed software is as easy as `module load APPLICATION`, for
 example:
 
-```
+```bash
 [john.hanks@cluster ~]$ which R
 /usr/bin/which: no R in (/home/john.hanks/.local/bin:/home/john.hanks/bin:/hpc/slurm/current/../utils:/hpc/slurm/current/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin)
 [john.hanks@cluster ~]$ module load R
@@ -37,7 +37,7 @@ https://www.gnu.org/licenses/.
 
 To see what software you have loaded, `module list`:
 
-```
+```bash
 [john.hanks@cluster ~]$ module list
 
 Currently Loaded Modules:
@@ -52,7 +52,8 @@ Currently Loaded Modules:
 ## `module spider`
 
 To get information about a specific module, especially how to load it, `module spider`:
-```
+
+```bash
 [randall.white@cluster ~]$ module spider cryosparc
 
 -------------------------------------------------------------------------------------------------------------------------------
@@ -99,7 +100,7 @@ To get information about a specific module, especially how to load it, `module s
 
 As implied in the `module list` output, to remove things from the environment you can `module purge` to completely clean it or `module unload` to remove a specific package.
 
-```
+```bash
 [john.hanks@cluster ~]$ which R
 /hpc/apps/x86_64/r/4.1/bin/R
 [john.hanks@cluster ~]$ module unload R
